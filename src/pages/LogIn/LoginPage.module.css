@@ -1,7 +1,9 @@
 .text {
+  margin-bottom: 10px;
   font-weight: 700;
   text-align: center;
 }
+
 .wrapper {
   display: flex;
   align-items: center;
