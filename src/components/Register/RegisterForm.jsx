@@ -14,7 +14,6 @@ const registerSchema = Yup.object().shape({
 
 export const RegisterForm = () => {
   const dispatch = useDispatch();
-
   const nameId = useId();
   const emailId = useId();
   const passId = useId();
