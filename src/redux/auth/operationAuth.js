@@ -10,7 +10,6 @@ const setAuthHeader = token => {
 
 const clearAuthHeader = () => {
   axios.defaults.headers.common.Authorization = '';
-  localStorage.removeItem('token');
 };
 
 export const register = createAsyncThunk('auth/register', async (credentials, thunkApi) => {
@@ -45,7 +44,7 @@ export const logOut = createAsyncThunk('auth/logout', async (_, thunkApi) => {
   }
 });
 
-export const refreshUser = createAsyncThunk('auth/ refresh', async (_, thunkApi) => {
+export const refreshUser = createAsyncThunk('auth/refresh', async (_, thunkApi) => {
   const state = thunkApi.getState();
   const persistedToken = state.auth.token;
 
